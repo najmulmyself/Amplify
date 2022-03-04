@@ -13,24 +13,37 @@ class HomeScreen extends StatelessWidget {
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('Amplify'),
+            Text(
+              'Amplify',
+              style: TextStyle(
+                color: Colors.amber,
+                fontSize: 50,
+              ),
+            ),
             Padding(
               padding:
-                  const EdgeInsets.symmetric(vertical: 8.0, horizontal: 20),
+                  const EdgeInsets.symmetric(vertical: 8.0, horizontal: 25),
               child: Container(
-                child: TextField(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(6),
+                  border: Border.all(
+                    width: 1.2,
+                    color: Colors.white,
+                  ),
+                ),
+                child: const TextField(
                   style: TextStyle(),
                   decoration: InputDecoration(
                     hintStyle: TextStyle(color: Colors.grey),
                     hintText: 'Username or email address',
                     // focusedBorder: InputBorder.none,
                     // disabledBorder: InputBorder.none,
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(5),
-                      ),
-                      borderSide: BorderSide(width: 1, color: Colors.red),
-                    ),
+                    // border: OutlineInputBorder(
+                    //   borderRadius: BorderRadius.all(
+                    //     Radius.circular(5),
+                    //   ),
+                    //   borderSide: BorderSide(width: 1, color: Colors.red),
+                    // ),
                     // disabledBorder: OutlineInputBorder(
                     //   borderSide: BorderSide(
                     //     color: Colors.white,
