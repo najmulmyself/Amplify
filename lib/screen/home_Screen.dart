@@ -1,6 +1,8 @@
 import 'dart:ffi';
 import 'dart:ui';
 
+import 'package:amplify/screen/button.dart';
+import 'package:amplify/screen/text_field.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -22,62 +24,35 @@ class HomeScreen extends StatelessWidget {
                 fontSize: 50,
               ),
             ),
-            Padding(
-              padding:
-                  const EdgeInsets.symmetric(vertical: 8.0, horizontal: 25),
-              child: Container(
-                decoration: BoxDecoration(
-                  color: Colors.grey.shade900,
-                  borderRadius: BorderRadius.circular(6),
-                  border: Border.all(
-                    width: 1.2,
-                    color: Colors.white,
-                  ),
-                ),
-                child: const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 8.0),
-                  child: TextField(
-                    cursorColor: Colors.grey,
-                    style: TextStyle(
-                      color: Colors.grey,
-                    ),
-                    decoration: InputDecoration(
-                      focusedBorder: InputBorder.none,
-                      hintStyle: TextStyle(color: Colors.grey),
-                      hintText: 'Username or email address',
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            Padding(
-              padding:
-                  const EdgeInsets.symmetric(vertical: 8.0, horizontal: 25),
-              child: Container(
-                decoration: BoxDecoration(
-                  color: Colors.grey.shade900,
-                  borderRadius: BorderRadius.circular(6),
-                  border: Border.all(
-                    width: 1.2,
-                    color: Colors.white,
-                  ),
-                ),
-                child: const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 8.0),
-                  child: TextField(
-                    cursorColor: Colors.grey,
-                    style: TextStyle(
-                      color: Colors.grey,
-                    ),
-                    decoration: InputDecoration(
-                      focusedBorder: InputBorder.none,
-                      hintStyle: TextStyle(color: Colors.grey),
-                      hintText: 'Password',
-                    ),
-                  ),
-                ),
-              ),
-            ),
+            TextFieldWidget(),
+            // Padding(
+            //   padding:
+            //       const EdgeInsets.symmetric(vertical: 8.0, horizontal: 25),
+            //   child: Container(
+            //     decoration: BoxDecoration(
+            //       color: Colors.grey.shade900,
+            //       borderRadius: BorderRadius.circular(6),
+            //       border: Border.all(
+            //         width: 1.2,
+            //         color: Colors.white,
+            //       ),
+            //     ),
+            //     child: const Padding(
+            //       padding: EdgeInsets.symmetric(horizontal: 8.0),
+            //       child: TextField(
+            //         cursorColor: Colors.grey,
+            //         style: TextStyle(
+            //           color: Colors.grey,
+            //         ),
+            //         decoration: InputDecoration(
+            //           focusedBorder: InputBorder.none,
+            //           hintStyle: TextStyle(color: Colors.grey),
+            //           hintText: 'Password',
+            //         ),
+            //       ),
+            //     ),
+            //   ),
+            // ),
             Align(
               alignment: Alignment.bottomRight,
               child: Padding(
@@ -91,31 +66,7 @@ class HomeScreen extends StatelessWidget {
             SizedBox(
               height: 40,
             ),
-            ElevatedButton(
-              style: ButtonStyle(
-                backgroundColor:
-                    MaterialStateProperty.all(Colors.amber.shade400),
-                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                  RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(18.0),
-                  ),
-                ),
-              ),
-              onPressed: () {},
-              child: Container(
-                decoration:
-                    BoxDecoration(borderRadius: BorderRadius.circular(30)),
-                width: 300,
-                child: Center(
-                    child: Text(
-                  'LOG IN',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 15,
-                  ),
-                )),
-              ),
-            )
+            Button()
           ],
         ),
       ),
