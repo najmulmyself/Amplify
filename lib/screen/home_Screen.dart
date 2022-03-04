@@ -24,7 +24,7 @@ class HomeScreen extends StatelessWidget {
                 fontSize: 50,
               ),
             ),
-            TextFieldWidget(),
+            TextFieldWidget(hText: '',),
             // Padding(
             //   padding:
             //       const EdgeInsets.symmetric(vertical: 8.0, horizontal: 25),

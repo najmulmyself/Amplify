@@ -1,19 +1,16 @@
-
 import 'package:flutter/material.dart';
 
 class TextFieldWidget extends StatelessWidget {
+  final String hext;
+  const TextFieldWidget({
+    Key? key, @required this.hText
+  }) : super(key: key);
 
-  TextFieldWidget({this.hintText})
-  // const TextFieldWidget({
-  //   Key? key,
-  // }) : super(key: key);
-  final hintText;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding:
-          const EdgeInsets.symmetric(vertical: 8.0, horizontal: 25),
+      padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 25),
       child: Container(
         decoration: BoxDecoration(
           color: Colors.grey.shade900,
