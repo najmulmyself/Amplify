@@ -4,8 +4,14 @@ class Button extends StatelessWidget {
   var btnColor;
   var btnBgColor;
   var btnText;
+  // Function GestureDetector;
   dynamic ext;
-  Button({this.btnColor, this.btnText, this.btnBgColor, this.ext = ''});
+  Button({
+    this.btnColor,
+    this.btnText,
+    this.btnBgColor,
+    this.ext = '',
+  });
 
   @override
   Widget build(BuildContext context) {

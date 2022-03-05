@@ -162,7 +162,7 @@ class _EmailSignUpState extends State<EmailSignUp> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (ctx) => EmailSignSecond(),
+                            builder: (context) => EmailSignSecond(),
                           ),
                         );
                       },
@@ -170,6 +170,7 @@ class _EmailSignUpState extends State<EmailSignUp> {
                         btnBgColor: Colors.amber,
                         btnColor: Colors.black,
                         btnText: 'Next',
+                        
                         // ext: Icon(Icons.abc),
                         ext: null,
                       ),
