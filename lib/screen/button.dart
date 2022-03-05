@@ -4,8 +4,8 @@ class Button extends StatelessWidget {
   var btnColor;
   var btnBgColor;
   var btnText;
-  var ext;
-  Button({this.btnColor, this.btnText, this.btnBgColor, this.ext});
+  dynamic ext;
+  Button({this.btnColor, this.btnText, this.btnBgColor, this.ext = ''});
 
   @override
   Widget build(BuildContext context) {
@@ -21,20 +21,20 @@ class Button extends StatelessWidget {
       onPressed: () {},
       child: Row(
         children: [
-          ext,
+          ext == null ? Text('') : ext,
           Container(
-            decoration:
-                BoxDecoration(borderRadius: BorderRadius.circular(30)),
+            decoration: BoxDecoration(borderRadius: BorderRadius.circular(30)),
             width: 300,
             child: Center(
-                child: Text(
-              btnText,
-              style: TextStyle(
-                color: btnColor,
-                fontSize: 15,
-                letterSpacing: 1,
+              child: Text(
+                btnText,
+                style: TextStyle(
+                  color: btnColor,
+                  fontSize: 15,
+                  letterSpacing: 1,
+                ),
               ),
-            ),),
+            ),
           ),
         ],
       ),
