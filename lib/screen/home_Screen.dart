@@ -12,6 +12,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        resizeToAvoidBottomInset: false, 
         backgroundColor: Colors.black,
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -30,34 +31,6 @@ class HomeScreen extends StatelessWidget {
             TextFieldWidget(
               hText: 'Password',
             ),
-            // Padding(
-            //   padding:
-            //       const EdgeInsets.symmetric(vertical: 8.0, horizontal: 25),
-            //   child: Container(
-            //     decoration: BoxDecoration(
-            //       color: Colors.grey.shade900,
-            //       borderRadius: BorderRadius.circular(6),
-            //       border: Border.all(
-            //         width: 1.2,
-            //         color: Colors.white,
-            //       ),
-            //     ),
-            //     child: const Padding(
-            //       padding: EdgeInsets.symmetric(horizontal: 8.0),
-            //       child: TextField(
-            //         cursorColor: Colors.grey,
-            //         style: TextStyle(
-            //           color: Colors.grey,
-            //         ),
-            //         decoration: InputDecoration(
-            //           focusedBorder: InputBorder.none,
-            //           hintStyle: TextStyle(color: Colors.grey),
-            //           hintText: 'Password',
-            //         ),
-            //       ),
-            //     ),
-            //   ),
-            // ),
             Align(
               alignment: Alignment.bottomRight,
               child: Padding(
@@ -71,7 +44,67 @@ class HomeScreen extends StatelessWidget {
             SizedBox(
               height: 40,
             ),
-            Button()
+            Button(),
+            SizedBox(
+              height: 30,
+            ),
+            TextButton(
+              onPressed: () {},
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(
+                    Icons.facebook,
+                  ),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  Text(
+                    'Continue with Facebook',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ],
+              ),
+            ),
+            TextButton(
+              onPressed: () {},
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset('assets/images/google.png'),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  Text(
+                    'Continue with Google',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 40.0),
+              child: Divider(
+                height: 50,
+                color: Colors.amber,
+              ),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'Don\'t have an account ?  ',
+                  style: TextStyle(color: Colors.white),
+                ),
+                GestureDetector(
+                  onTap: () {},
+                  child: Text(
+                    'Sign up',
+                    style: TextStyle(color: Colors.amber),
+                  ),
+                )
+              ],
+            )
           ],
         ),
       ),
