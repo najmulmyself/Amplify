@@ -2,7 +2,7 @@ import 'dart:ffi';
 import 'dart:ui';
 
 import 'package:amplify/screen/button.dart';
-import 'package:amplify/screen/sign_up.dart';
+import 'package:amplify/screen/social_sign_up.dart';
 import 'package:amplify/screen/text_field.dart';
 import 'package:flutter/material.dart';
 

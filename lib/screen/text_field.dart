@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 
 class TextFieldWidget extends StatelessWidget {
   String? hText;
-  TextFieldWidget({this.hText})
+  dynamic? borderColor;
+  dynamic? fieldColor;
+  double? horizontalV;
+  TextFieldWidget({this.hText, this.horizontalV = 25.0, this.fieldColor , this.borderColor})
   // const TextFieldWidget({
   //   Key? key, @required this.hText
   // }) : super(key: key)
@@ -11,14 +14,14 @@ class TextFieldWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: 8.0, horizontal: 25),
+      padding: EdgeInsets.symmetric(vertical: 8.0, horizontal: horizontalV!),
       child: Container(
         decoration: BoxDecoration(
-          color: Colors.grey.shade900,
+          color: fieldColor,
           borderRadius: BorderRadius.circular(6),
           border: Border.all(
             width: 1.2,
-            color: Colors.white,
+            color: borderColor,
           ),
         ),
         child: Padding(
