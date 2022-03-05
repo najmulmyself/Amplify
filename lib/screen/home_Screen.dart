@@ -16,7 +16,7 @@ class HomeScreen extends StatelessWidget {
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text(
+            Text(
               'Amplify',
               style: TextStyle(
                 color: Colors.amber,
@@ -24,7 +24,12 @@ class HomeScreen extends StatelessWidget {
                 fontSize: 50,
               ),
             ),
-            TextFieldWidget(hText: '',),
+            TextFieldWidget(
+              hText: 'Username or Email address',
+            ),
+            TextFieldWidget(
+              hText: 'Password',
+            ),
             // Padding(
             //   padding:
             //       const EdgeInsets.symmetric(vertical: 8.0, horizontal: 25),

@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 
 class TextFieldWidget extends StatelessWidget {
-  final String hext;
-  const TextFieldWidget({
-    Key? key, @required this.hText
-  }) : super(key: key);
-
+  String? hText;
+  TextFieldWidget({this.hText})
+  // const TextFieldWidget({
+  //   Key? key, @required this.hText
+  // }) : super(key: key)
+  ;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 25),
+      padding: EdgeInsets.symmetric(vertical: 8.0, horizontal: 25),
       child: Container(
         decoration: BoxDecoration(
           color: Colors.grey.shade900,
@@ -20,7 +21,7 @@ class TextFieldWidget extends StatelessWidget {
             color: Colors.white,
           ),
         ),
-        child: const Padding(
+        child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 8.0),
           child: TextField(
             cursorColor: Colors.grey,
@@ -30,7 +31,7 @@ class TextFieldWidget extends StatelessWidget {
             decoration: InputDecoration(
               focusedBorder: InputBorder.none,
               hintStyle: TextStyle(color: Colors.grey),
-              hintText: 'Username or email address',
+              hintText: hText,
             ),
           ),
         ),
